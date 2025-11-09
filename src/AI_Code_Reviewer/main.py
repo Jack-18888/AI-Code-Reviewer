@@ -14,7 +14,7 @@ app.add_middleware(
 )
 
 
-@app.post("/debug")
+@app.api_route("/debug", methods=["GET", "POST", "PUT", "PATCH", "DELETE"])
 async def test(request: Request):
     print("========== New Request ==========")
     
